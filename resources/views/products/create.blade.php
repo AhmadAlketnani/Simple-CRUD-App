@@ -15,7 +15,7 @@
 <div class="row justify-content-center mt-5">
     <div class="col-lg-4">
         <div class="card">
-            <div class="card-header">
+            <div class="card-header text-center">
                     <h1>Create a Product</h1>
                 @if($errors->any())
                     <ul>

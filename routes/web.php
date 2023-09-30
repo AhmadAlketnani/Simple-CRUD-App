@@ -14,10 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect(route('product.index'));
 });
 Route::get('product', 'productController@index')->name('product.index');
 Route::get('product/create', 'productController@create')->name('product.create');
 Route::post('product/create', 'productController@save')->name('product.create');
+Route::get('product/{product}/edit', 'productController@edit')->name('product.edit');
+Route::put('product/{product}/edit', 'productController@update')->name('product.edit');
+Route::delete('product/{product}/delete', 'productController@delete')->name('product.delete');
 
 
